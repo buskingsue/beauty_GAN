@@ -75,10 +75,12 @@ def preprocess(img):
     return img / 127.5 - 1
 def deprocess(img):
     return 0.5 * img + 0.5
+
 #no makeup image
-img1 = dlib.load_rgb_image('D:/beauty_gan_python/beauty_gan_python/imgs/no_makeup/vSYYZ429.png')
+img1 = dlib.load_rgb_image('D:/beauty_gan_python/beauty_gan_python\imgs/12.jpg')
 img1_faces = align_face(img1)
-# 얼굴 화장이 된 이미지
+
+# 얼굴 화장이 된 참조 이미지
 img2 = dlib.load_rgb_image('D:/beauty_gan_python/beauty_gan_python/imgs/makeup/XMY-014.png')
 img2_faces = align_face(img2)
 
