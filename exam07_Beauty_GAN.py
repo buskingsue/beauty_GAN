@@ -77,7 +77,7 @@ def deprocess(img):
     return 0.5 * img + 0.5
 
 #no makeup image
-img1 = dlib.load_rgb_image('D:/beauty_gan_python/beauty_gan_python\imgs/12.jpg')
+img1 = dlib.load_rgb_image('D:/beauty_gan_python/beauty_gan_python/imgs/11.jpg')
 img1_faces = align_face(img1)
 
 # 얼굴 화장이 된 참조 이미지
@@ -101,7 +101,7 @@ Y_img = np.expand_dims(Y_img, axis=0)
 output = sess.run(Xs, feed_dict={X:X_img, Y:Y_img})
 output_img = deprocess(output[0])
 
-fig, axes = plt.subplots(1, 3, figsize=(8, 5))
+fig, axes = plt.subplots(1, 3, figsize=(10, 3))
 axes[0].imshow(img1_faces[0])
 axes[1].imshow(img2_faces[0])
 axes[2].imshow(output_img)
